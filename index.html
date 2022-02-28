@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-primary text-white p-3 mb-2">
+        <div class="container text-center">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="card w-10">
+            <div class="card-body bg-light">
+                <h5 class="card-title">Search for a City:</h5>
+                <form id="search-city" class="form-inline">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" class="form-control mr-0 pr-0"><button
+                                id="search-button" type="submit" class="btn btn-primary ml-0"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                </form>
+            </div>
+            <p class="list-group-flush">
+            <ul class="list-group " id="cityListGroup">
+            </ul>
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="w-75 px-3 no-gutters">
+        <div class=container>
+            <div class="card border-dark mb-3">
+                <div class="card-header font-weight-bold">
+                    <h3><span id="currentCityName"></span> (<span id="day0-date"></span>) <img id="day0-icon" src="">
+                    </h3>
+                </div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Temperature: <span id="day0-temp"></span></p>
+                    <p class="card-text">Humidity: <span id="day0-hum"></span></p>
+                    <p class="card-text">Wind Speed: <span id="day0-wind"></span></p>
+                    <p class="card-text">UV Index: <span id="day0-UV"></span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">5-Day Forecast:</h5>
+                    <div class="card-deck">
+                        <div class="card bg-primary text-light">
+                            <div class="card-body">
+                                <h5 class="card-text"><span id="day1-date"></span></h5>
+                                <p class="card-text"><img id="day1-icon" src=""></i></p>
+                                <p class="card-text">Temp: <span id="day1-temp"></span></p>
+                                <p class="card-text">Wind Speed: <span id="day1-wind"></span></p>
+                                <p class="card-text">Hum: <span id="day1-hum"></span></p>
+                            </div>
+                        </div>
+                        <div class="card bg-primary text-light">
+                            <div class="card-body">
+                                <h5 class="card-text" id="day2-date"></h5>
+                                <p class="card-text"><img id="day2-icon" src=""></i></p>
+                                <p class="card-text">Temp: <span id="day2-temp"></span></p>
+                                <p class="card-text">Wind Speed: <span id="day2-wind"></span></p>
+                                <p class="card-text">Hum: <span id="day2-hum"></span></p>
+                            </div>
+                        </div>
+                        <div class="card bg-primary text-light">
+                            <div class="card-body">
+                                <h5 class="card-text" id="day3-date"></h5>
+                                <p class="card-text"><img id="day3-icon" src=""></i></p>
+                                <p class="card-text">Temp: <span id="day3-temp"></span></p>
+                                <p class="card-text">Wind Speed: <span id="day3-wind"></span></p>
+                                <p class="card-text">Hum: <span id="day3-hum"></span></p>
+                            </div>
+                        </div>
+                        <div class="card bg-primary text-light">
+                            <div class="card-body">
+                                <h5 class="card-text" id="day4-date"></h5>
+                                <p class="card-text"><img id="day4-icon" src=""></i></p>
+                                <p class="card-text">Temp: <span id="day4-temp"></span></p>
+                                <p class="card-text">Wind Speed: <span id="day4-wind"></span></p>
+                                <p class="card-text">Hum: <span id="day4-hum"></span></p>
+                            </div>
+                        </div>
+                        <div class="card bg-primary text-light">
+                            <div class="card-body">
+                                <h5><span class="card-text" id="day5-date"></span></h5>
+                                <p class="card-text"><img id="day5-icon" src=""></i></p>
+                                <p class="card-text">Temp: <span id="day5-temp"></span></p>
+                                <p class="card-text">Wind Speed: <span id="day5-wind"></span></p>
+                                <p class="card-text">Hum: <span id="day5-hum"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
+
+</html>
